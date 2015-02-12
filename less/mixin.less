@@ -1,0 +1,35 @@
+
+
+.button(@c,@size,@type:normal){
+
+	& when (@size = xs) { font-size: 11px; padding: 3px 5px; }
+	& when (@size = s) { font-size: 12px; padding: 4px 7px; }
+	& when (@size = m) { font-size: 15px; padding: 6px 10px; }
+	& when (@size = l) { font-size: 20px; padding: 10px 15px; }
+
+	& when (@type =normal) { background-color: @c; color: @white;}
+	& when (@type =outline) { background-color: transparent; color: @c; border: 2px solid @c;}	
+
+	&:hover when (@type = normal){ text-decoration: none; background-color: @c+(-35%); color: @white;}
+
+	&:hover when (@type = outline){	text-decoration: none;  color: @c+(-25%);  border-color: @c+(-45%);}
+
+	display: inline-block;
+	border-radius: @bdrs;
+	transition: @transition background-color, @transition color, @transition border;
+	vertical-align: top;
+
+}
+
+.button--micro(@c){
+
+	.button(@red_soft,xs);
+
+}
+
+.button--shadowed(@size,@color){
+
+	box-shadow: 0 @size 0 0 @color;
+	
+}
+
