@@ -12,6 +12,8 @@
 		
 		<script src="js/jquery-2.1.1.min.js"></script>
 		<script src="carousel/owl.carousel.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/responsive.js"></script>
 		<script src="js/live.js"></script>
 
 	</head>
@@ -40,36 +42,54 @@
 						<div class="logo__branding">
 							<img class="logo__letters" src="img/micrologo.png" alt="WafWaf">
 							<p class="logo__slogan">Деревянные значки</p>
-						</div>
-					</a>
+						</div><!-- /.logo__branding-->
+					</a><!-- /.navbar__logo -->
 	
 					<nav class="navbar__menu col-md-6 hidden-sm hidden-xs">
 						<ul>
 							<li><a href="">Lorem.</a></li>
 							<li class="active"><a href="">Atque?</a></li>
-							<li><a href="">Ipsam.</a></li>
+							<li><a href=" ">Ipsam.</a></li>
 							<li><a href="">Architecto?</a></li>
 						</ul>
 					</nav><!-- /.navbar__menu -->
 	
-					<div class="col-md-3 col-sm-7 col-xs-3">
+					<div class="navbar__cart-box col-md-3 col-sm-7 col-xs-3">
 						
 						<div class="navbar__cart ">
+
 							<a href="#" class="navbar__cart__icon"></a>
 							<p class="navbar__cart__status  hidden-xs" >5 значков на 1500 р</p>
 							<a href="/process" class="navbar__cart__process  hidden-xs">Оформить покупку</a>
+						
+							<div class="navbar__cart__hovercart">
+								
+								<h2 class="navbar__cart__hovercart__title">Корзина</h2>
+								<p class="navbar__cart__hovercart__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  nemo cupiditate ipsam illo nobis soluta,  ab temporibus? Sunt nostrum ipsam deserunt officia adipisci tempore.</p>
+								
+								<div class="navbar__cart__hovercart__list clearfix">
+									
+									<a class="navbar__cart__hovercart__list__item" href=""><img src="http://placehold.it/60x60" alt=""></a>
+									<a class="navbar__cart__hovercart__list__item" href=""><img src="http://placehold.it/60x60" alt=""></a>
+									<a class="navbar__cart__hovercart__list__item" href=""><img src="http://placehold.it/60x60" alt=""></a>
+
+								</div>
+
+								<a href="" class="navbar__cart__hovercart__process">Оформить заказ</a>
+						
+							</div><!-- /.navbar__cart__hovercart -->
+
 						</div> <!-- /.navbar__cart -->
-					</div>
+
+					</div><!-- navbar__cart-box -->
 
 					<div class="col-xs-2 col-sm-1 hidden-md hidden-lg text-right navbar__sandwich ">
 						
-						<button class="sandwich">
-							 
-						</button>
+						<button class="navbar__sandwich__icon"></button>
 
-					</div>
+					</div> <!-- navbar__sandwitch -->
 					
-	
+				 
 				</div> <!-- /.navbar.row -->
 	
 			</div> <!-- .container -->
@@ -87,10 +107,10 @@
 			 	<li><a href="">Culpa, consequatur!</a></li>
 			 </ul>
 
-			</nav>
+			</nav><!-- /.navbar-sub -->
 			
-		</div><!-- /.subnav-top -->
-		<!-- /.container  -->
+		</div><!-- /.container  -->
+		
 
 	</header>
 
@@ -178,8 +198,7 @@
 							 	<input class="single-badge__cart__price__qty" type="number" value="1"/>
 							 		 
 
-								<a href="" class="button--default">
-Добавить в корзину</a>
+								<a href="" class="button--default">Добавить в корзину</a>
 
 							 </div>	
 
@@ -234,14 +253,76 @@
 
 			 		</article>
 				
-		
 			 	</main><!-- /.col-md-8 -->
 			 </div><!-- /.row -->
 		 </div>
 
+		 
+
+<!--......#####...######..##.......####...######..######..#####..
+ .........##..##..##......##......##..##....##....##......##..##.
+ .........#####...####....##......######....##....####....##..##.
+ .........##..##..##......##......##..##....##....##......##..##.
+ .........##..##..######..######..##..##....##....######..#####..
+ -->
+
+		<div class="container related-badges">
+			
+			<h2 class="related-badges__title"><span>В этой коллекции еще 15 значков:</span></h2>
+
+			<p class="related-badges__show-all"><a href="#" class="">А можно всех посмотреть?</a></p>
+			
+			 <div class="owl-related">
+				 
+				 	<div class="owl-related__item">
+				 		<figure class="owl-related__item__picture clearfix">
+							<img src="http://placehold.it/300x200" alt="" data-xs-src="http://placehold.it/120x120">
+							<a href="" class="owl-related__item__collection pull-left">Морская коллекция</a>
+							<span class="owl-related__item__button button--dark pull-right">350 P</span>
+				 		</figure>
+						<div class="clearfix owl-related__item__info">
+								<h3 class="owl-related__item__title pull-left">Описание этой штуки</h3>
+							
+								<a href="" class="owl-related__item__buy button--default pull-right">Купить меня</a>	 
+						</div>
+				 	</div>
+				 	<div class="owl-related__item">
+				 		<figure class="owl-related__item__picture clearfix">
+							<img src="http://placehold.it/300x200" alt="" data-xs-src="http://placehold.it/120x120">
+							<a href="" class="owl-related__item__collection pull-left">Морская коллекция</a>
+							<span class="owl-related__item__button button--dark pull-right">350 P</span>
+				 		</figure>
+						<div class="clearfix owl-related__item__info">
+								<h3 class="owl-related__item__title pull-left">Описание этой штуки</h3>
+							
+								<a href="" class="owl-related__item__buy button--default pull-right">Купить меня</a>	 
+						</div>
+				 	</div>
+				 	<div class="owl-related__item">
+				 		<figure class="owl-related__item__picture clearfix">
+							<img src="http://placehold.it/300x200" alt="" data-xs-src="http://placehold.it/120x120">
+							<a href="" class="owl-related__item__collection pull-left">Морская коллекция</a>
+							<span class="owl-related__item__button button--dark pull-right">350 P</span>
+				 		</figure>
+						<div class="clearfix owl-related__item__info">
+								<h3 class="owl-related__item__title pull-left">Описание этой штуки</h3>
+							
+								<a href="" class="owl-related__item__buy button--default pull-right">Купить меня</a>	 
+						</div>
+				 	</div>
+
+				 					 					    
+				 				    
+				<div> <img class="img-responsive" src="http://placehold.it/300x200" alt=""> </div>					    
+				<div> <img class="img-responsive" src="http://placehold.it/300x200" alt=""> </div>					    
+				<div> <img class="img-responsive" src="http://placehold.it/300x200" alt=""> </div>					    
+			</div>
+
+
+		</div>
 	 
 
-	 <!-- 
+	<!-- 
 
 	 .######...####....####...######..######..#####..
 	 .##......##..##..##..##....##....##......##..##.
@@ -250,9 +331,9 @@
 	 .##.......####....####.....##....######..##..##.
 	 ................................................
 
-	  -->
+	-->
 
-	  <footer>
+	<footer>
 
 	  	<div class="somit-dark ">
 
@@ -295,6 +376,17 @@
 	  		
 	  	</div><!-- /.somit somit-dark -->
 
+		<div class="footer__bridge text-center">
+			
+			<div class="footer__bridge__text">
+				
+				<img class = "visible-xs-inline" src="img/dog_head.svg" alt="">
+				<p class="footer__bridge__text__slogan visible-xs-inline">Добрые, слюнявые, твои</p>
+				<img class="visible-xs-inline" src="img/dog_head.svg" alt="">				
+
+			</div>
+
+		</div>
 
 	  	<div class="somit-dark footer__last">
 	  		
@@ -331,34 +423,9 @@
 
 	  	</div><!-- /.somit-dark -->
 	  	
-
-	  </footer>
-
-
-
-<script>
-    $('.owl-carousel').owlCarousel({
-        items:1,
-        loop:true,
-        center:true,
-        margin:10,
-        URLhashListener:true,
-        autoplayHoverPause:true,
-        startPosition: 'URLHash',
-        responsiveClass:true,
-    	responsive:{
-
-			0:{ nav:true }, 991:{ nav:false },
-
-
-        },
-
-    	
-         
-    });
-</script>
-
+	</footer>
 
     	
 	</body>
 </html>
+

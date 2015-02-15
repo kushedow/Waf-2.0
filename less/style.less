@@ -50,27 +50,31 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 
 
 	.button--default {
-
 		.button(@red_soft,m);
-
 		.button--shadowed(5px,@red_dark)
-
 	}
-
-	.sandwich {
+	.button--dark {
+		.button(@purple_soft,m);
+		 
+	}
+	.navbar__sandwich__icon {
 
 		background-image: url(../img/navicon.svg);
-		width: 30px;
-		height: 30px;
 		background-repeat: no-repeat;
 		display: inline-block;
 		background-position: center center;
-		background-size: 90%;
+		background-size: 30px;
 		background-color: transparent;
 		border:none;
-		margin-top: 3px;
+		height: @menu_h;
+		width: @menu_h;
+		 
+
+		&:hover { background-color: @purple_dark+10%;}
 
 		&:focus{outline: none;}
+
+
 
 	}
 	
@@ -99,7 +103,13 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 //  .........######...####....####....####..
  
 
-.navbar__logo {display: block;}
+.navbar__logo {
+
+	display: block; 
+	overflow: hidden; 
+	
+
+}
 
 .logo__dog { float: left; margin-right: 5px;}
 .logo__branding {float: left;   margin-top: -3px;}
@@ -122,18 +132,16 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 
  .navbar__menu {
 
+
+
  	ul {margin: 0;}
 
-	li{ display: inline-block;}
+	li{ display: inline-block; line-height: 26px; padding-left: 0;}
 
 	a{ display: inline-block; padding: 5px 20px; color: @yellow_soft;}
 }
  
-.navbar__sandwich {
-
-	text-align: right;
-
-}
+ 
 
 // ..........####....####...#####...######.
 //  .........##..##..##..##..##..##....##...
@@ -153,11 +161,22 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 	transition: @transition;
 	cursor:pointer;
 
+
+	.navbar__cart__hovercart {
+
+			display: none;
+
+	}
+
 	&:hover {
 
 		background-color: @purple_dark+10%;
 
+		 
+
 	}
+
+
 
 }
 
@@ -194,6 +213,67 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 
 	}
 }
+
+// .##..##...####...##..##..######..#####....####....####...#####...######.
+// .##..##..##..##..##..##..##......##..##..##..##..##..##..##..##....##...
+// .######..##..##..##..##..####....#####...##......######..#####.....##...
+// .##..##..##..##...####...##......##..##..##..##..##..##..##..##....##...
+// .##..##...####.....##....######..##..##...####...##..##..##..##....##...
+ 
+
+
+.navbar__cart__hovercart {
+
+	position: absolute;
+	top: @menu_h+(-10);
+	background-color: #f4f4f4;
+	width: 100%;
+	right: 15px;
+	padding: 20px;
+	z-index: 2;
+}
+
+.navbar__cart__hovercart__title {
+
+	font-size: 20px; font-weight: normal;
+}
+
+.navbar__cart__hovercart__info {
+	font-size: 15px;
+	padding: 15px 0px;
+}
+
+.navbar__cart__hovercart__list {
+}
+
+.navbar__cart__hovercart__list__item {
+
+	width: 80%/3;
+	margin: 5%;
+	display: block;
+	float: left;
+
+	&:first-child{	margin-left: 0;}
+	&:last-child{	margin-right: 0;}
+
+}
+
+.navbar__cart__hovercart__list__item > img {
+
+	border: 2px solid @purple_dark;
+	width: 100%;
+}
+
+.navbar__cart__hovercart__process {
+
+	.button(@red_soft,m);
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+
+
 
  // ..........####...##..##..#####...##...##..######..##..##..##..##.
  // .........##......##..##..##..##..###.###..##......###.##..##..##.
@@ -400,6 +480,118 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 }
 
 
+// .........#####...######..##.......####...######..######..#####..
+//  .........##..##..##......##......##..##....##....##......##..##.
+//  .........#####...####....##......######....##....####....##..##.
+//  .........##..##..##......##......##..##....##....##......##..##.
+//  .........##..##..######..######..##..##....##....######..#####..
+
+.related-badges{
+
+
+}
+
+.related-badges__title {	
+
+	text-align: center;
+	position: relative;
+	font-size: 30px;
+	margin-bottom: 15px;
+
+	span { padding: 0 25px;
+	background-color: #fff;}
+
+	&:after {
+
+		content: "";
+		display: block;
+		position: absolute;
+		height: 1px;
+		background-color: @purple_soft;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		z-index: -1;
+
+	}
+
+
+
+}
+
+
+.related-badges__show-all{
+
+	text-align: center;
+	font-size: 15px; 
+
+	a{ color: @red_soft; text-decoration: underline;}
+}
+
+.owl-related{
+
+	margin-top: 30px;
+
+}
+
+
+
+.owl-related__item {
+
+	margin-bottom: 30px;
+
+}
+
+.owl-related__item__picture{
+
+	position: relative;
+	margin-bottom: 10px;
+
+}
+
+.owl-related__item__collection{
+
+	position: absolute;
+	left: 0px;
+	bottom: 15px;
+	background-color: @yellow_soft;
+	padding: 4px 7px;
+	font-size: @micro;
+	color: @asphalt;
+	text-decoration: underline;
+}
+
+.owl-related__item__button{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+
+}
+
+
+// слайдер похожих
+
+.owl-related {
+
+	.owl-prev {
+
+		left: 0px;
+		top: -65px;
+		border-radius: 50%;
+
+	}
+
+	.owl-next {
+
+		right: 0px;
+		top: -65px;
+		border-radius: 50%;
+
+	}
+
+}
+
+
 
 //  ..........####...##......######..#####...######..#####..
 //  .........##......##........##....##..##..##......##..##.
@@ -508,24 +700,42 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 // .##......##..##..##..##....##....##......##..##.
 // .##.......####....####.....##....######..##..##.
 // ................................................
+// 
+footer {
+
+	margin-top: 40px;
+}
+
 .footer__last .container {
 
 	padding-top: 15px;
 }
 
-.footer__last:before{
-content: "";
-display: block;
-width: 100%;
-height: 50px;
-background-image: url(../img/photo/example05.jpg);
-background-size: 100% auto;
+.footer__bridge{
+
+	content: "";
+	display: block;
+	width: 100%;
+	height: 60px;
+	background-image: url(../img/photo/example05.jpg);
+	background-size: 100% auto;
+	text-align: center;
+
 
 }
 
+.footer__bridge__text__slogan{
+
+color: #fff;
+font-weight: bold;
+line-height: 60px;
+
+}
 
 @import "desktop.less"; 
 @import "tablet.less"; 
 @import "phone.less"; 
 
+
+ 
 
