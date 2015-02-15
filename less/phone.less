@@ -67,7 +67,7 @@ nav.navbar__menu{
 // .##..##..######..######..##..##....##....######..#####..
 
 
-.owl-related__item {	overflow: hidden; }
+.owl-grid__item {	overflow: hidden; }
 
 .related-badges__title{
 
@@ -87,7 +87,7 @@ nav.navbar__menu{
 
 .related-badges__show-all{display: none;}
 
-.owl-related__item__picture {
+.owl-grid__item__picture {
 
   display: inline-block;
   float: left;
@@ -101,7 +101,7 @@ nav.navbar__menu{
   }
 }
 
-.owl-related__item__info {
+.owl-grid__item__info {
 
 	float: left;
 
@@ -113,7 +113,7 @@ nav.navbar__menu{
 
 // название одного значка
 
-.owl-related__item__title {
+.owl-grid__item__title {
 
 	display: block;
 	font-size: 18px;
@@ -122,7 +122,7 @@ nav.navbar__menu{
 
 // ссылка на коллекцию
  
-.owl-related__item__collection {
+.owl-grid__item__collection {
 
 	position: static;
 	display: block;
@@ -136,7 +136,7 @@ nav.navbar__menu{
 
 // плашка с ценой
 
-.owl-related__item__button {
+.owl-grid__item__button {
 
 	position: static;
 	background-color: transparent;
@@ -153,7 +153,7 @@ nav.navbar__menu{
 
 // кнопка для покупки
 
-.owl-related__item__buy {
+.owl-grid__item__buy {
 
 	.button(@purple_soft,m);
 	.button--shadowed(5px,@purple_soft+(-20%));
@@ -163,6 +163,37 @@ nav.navbar__menu{
 .button--default {
 
 }
+
+
+
+
+// ..####....####...##......##......######...####...######..######...####...##..##.
+// .##..##..##..##..##......##......##......##..##....##......##....##..##..###.##.
+// .##......##..##..##......##......####....##........##......##....##..##..##.###.
+// .##..##..##..##..##......##......##......##..##....##......##....##..##..##..##.
+// ..####....####...######..######..######...####.....##....######...####...##..##.
+ 
+
+
+
+.collection__promo__gallery__item {
+
+    float: left;
+    width: 33%;
+  	padding: 5px;
+  	display: none;
+
+}
+
+.collection__promo__gallery__item--primary { 
+
+	float: none;
+	width: 100%; 
+	display: block;
+
+
+}
+
 
 
 

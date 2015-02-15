@@ -55,7 +55,7 @@ $(document).ready(function(){
 
 if($(window).width()>767){
 
-/* 768+ */    $('.owl-related').owlCarousel({
+/* 768+ */    $('.owl-grid--slider').owlCarousel({
 /* 768+ */      
 /* 768+ */        loop:false,
 /* 768+ */        margin:10,
@@ -75,15 +75,15 @@ if($(window).width()>767){
 
 if($(window).width()<=767){
 
-    $(".owl-related__item").each(function(){
+    $(".owl-grid__item").each(function(){
 
        var data = $(this).find(
 
-           ".owl-related__item__collection,.owl-related__item__button,.owl-related__item__buy"
+           ".owl-grid__item__collection,.owl-grid__item__button,.owl-grid__item__buy"
 
        ).detach();
 
-       data.appendTo($(this).find(".owl-related__item__info"));
+       data.appendTo($(this).find(".owl-grid__item__info"));
     });
 
 }

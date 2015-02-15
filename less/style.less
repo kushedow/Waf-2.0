@@ -528,7 +528,19 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 	a{ color: @red_soft; text-decoration: underline;}
 }
 
-.owl-related{
+
+//
+
+// ..####...##...##..##...............####...#####...######..#####..
+// .##..##..##...##..##..............##......##..##....##....##..##.
+// .##..##..##.#.##..##......######..##.###..#####.....##....##..##.
+// .##..##..#######..##..............##..##..##..##....##....##..##.
+// ..####....##.##...######...........####...##..##..######..#####..
+ 
+///  Сетка превращающаяся в слайдер. Или не превращающаяся.
+
+
+.owl-grid{
 
 	margin-top: 30px;
 
@@ -536,20 +548,23 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 
 
 
-.owl-related__item {
+.owl-grid__item {
 
 	margin-bottom: 30px;
+	position: relative;
 
 }
 
-.owl-related__item__picture{
+.owl-grid__item__picture{
 
 	position: relative;
 	margin-bottom: 10px;
 
+	img {width: 100%;}
+
 }
 
-.owl-related__item__collection{
+.owl-grid__item__collection{
 
 	position: absolute;
 	left: 0px;
@@ -561,17 +576,16 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 	text-decoration: underline;
 }
 
-.owl-related__item__button{
+.owl-grid__item__button{
 	position: absolute;
 	right: 10px;
 	bottom: 10px;
 
 }
 
+// вперед и назад
 
-// слайдер похожих
-
-.owl-related {
+.owl-grid {
 
 	.owl-prev {
 
@@ -590,6 +604,125 @@ h1,h2,h3,h4,h6,h6,p,ul {margin: 0;}
 	}
 
 }
+
+
+// ..####....####...##......##......######...####...######..######...####...##..##.
+// .##..##..##..##..##......##......##......##..##....##......##....##..##..###.##.
+// .##......##..##..##......##......####....##........##......##....##..##..##.###.
+// .##..##..##..##..##......##......##......##..##....##......##....##..##..##..##.
+// ..####....####...######..######..######...####.....##....######...####...##..##.
+ 
+
+
+
+.collection__header {
+
+		margin-top: 25px;
+		margin-bottom: 30px;
+}
+
+.collection__header__title {
+
+
+	margin-bottom: 10px;
+	font-size: 32px;
+	color: #353535;
+
+}
+
+.collection__header__subtitle {
+
+  color: #404040;
+  font-size: 18px;
+  font-weight: 400;
+  font-weight: normal;
+
+}
+
+.collection__header__author {
+	margin-top: 15px;
+	float: right;
+	color: #585858;
+	font-weight: normal;
+}
+
+
+
+
+.collection__promo {
+
+	position: relative;
+
+
+}
+
+.collection__promo__navigator__caption {
+
+	position: absolute;
+
+	left: 0;
+	bottom: 0;
+
+	padding: 30px;
+
+}
+
+.collection__promo__navigator__captain-obv {
+
+	color: #fff;
+
+}
+
+.collection__promo__navigator__title {
+
+  color: #353535;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.collection__promo__navigator__links {
+
+	padding-left: 0;
+}
+
+.collection__promo__navigator__links__item {
+
+	display: inline-block;
+}
+
+.collection__promo__navigator__links__item > a {
+
+	font-size: 15px;
+	color: #fff;
+}
+
+.collection__promo__gallery {
+
+    overflow: hidden;
+    margin: -5px;
+
+}
+
+.collection__promo__gallery__item {
+
+    float: left;
+    width: 25%;
+  	padding: 5px;
+
+}
+
+.collection__promo__gallery__item--primary { 
+
+	float: left;
+	width: 50%; 
+
+
+}
+
+
+.collection__promo__gallery__item > img { width: 100%; }
+
 
 
 
